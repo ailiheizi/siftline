@@ -1,0 +1,6 @@
+{
+  "_comment": "匿名臂映射：X/Y 是发给裁判的匿名臂标签。每个任务的 skill 条件在 X 或 Y 上交替，裁判不知道哪个臂是 skill。此文件不得传给任何裁判会话；summary 用它把裁判的 X/Y winner 还原为条件。",
+  "task1": { "X": "skill", "Y": "baseline" },
+  "task2": { "X": "baseline", "Y": "skill" },
+  "task3": { "X": "skill", "Y": "baseline" }
+}

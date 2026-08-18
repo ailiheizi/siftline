@@ -1,0 +1,4 @@
+interface:
+  display_name: "Siftline Research"
+  short_description: "Find high-signal relations, projects, and evidence"
+  default_prompt: "Use $siftline-research to choose the smallest research mode, verify decisive facts, and discover non-obvious evidence or open-source project paths for this seed."

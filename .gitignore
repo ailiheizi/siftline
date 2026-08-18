@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.DS_Store
+
+# Generated evaluation artifacts and model session traces.
+evals/**/output/
+evals/**/raw*.jsonl
+evals/**/stderr.log
+evals/**/__pycache__/
+docs/evals/**/raw*.json*
+docs/evals/**/fallback-*.json
+docs/evals/**/sessions*.json
+
+# Internal evaluation archives are not part of the public v1 package.
+docs/evals/
+docs/siftline-research-v4.20-forward-audit.md
+docs/siftline-research-v4.21-ab-multi-agent-eval.md
+docs/siftline-research-v4.22-hard-failure-audit.md
+evals/candidates/
+evals/runs/
+evals/micro-ab-2026-08-11/
+evals/skill-v3-v4-2026-08-10/

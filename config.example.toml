@@ -1,0 +1,46 @@
+# siftline example configuration.
+# Copy to ~/.config/siftline/config.toml (or set $SIFTLINE_CONFIG to point at
+# another file). Every key shown here is the default; omit what you don't need.
+
+[http]
+timeout_seconds = 30.0
+connect_timeout_seconds = 10.0
+retries = 1
+
+[cache]
+enabled = true
+# Empty means the platform cache dir (e.g. ~/Library/Caches/siftline on macOS).
+# Relative paths are resolved against this config file's directory.
+path = ""
+ttl_seconds = 3600
+
+[providers.github]
+# Transport is the authenticated `gh` CLI (preferred). No token is read by
+# siftline; gh uses its own stored credentials.
+gh_path = "gh"
+timeout_seconds = 60.0
+
+[providers.hn]
+# Public Hacker News Algolia API. No key required.
+base_url = "https://hn.algolia.com/api/v1"
+timeout_seconds = 30.0
+
+[providers.exa]
+base_url = "https://api.exa.ai"
+api_key_env = "SIFTLINE_EXA_API_KEY"
+timeout_seconds = 30.0
+
+[providers.tavily]
+base_url = "https://api.tavily.com"
+api_key_env = "SIFTLINE_TAVILY_API_KEY"
+timeout_seconds = 30.0
+
+# OpenAI-compatible Responses API web_search. base_url/endpoint may point at
+# any provider implementing POST /v1/responses with a `web_search` tool.
+[providers.openai_web]
+base_url = "https://api.openai.com/v1"
+endpoint = ""            # optional; defaults to {base_url}/responses
+api_key_env = "SIFTLINE_OPENAI_API_KEY"
+model = "gpt-4o-mini"
+timeout_seconds = 60.0
+max_results = 5
